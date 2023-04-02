@@ -6,4 +6,9 @@ select pokemons.name trainerID from pokemon_trainer left join pokemons on pokemo
 
 select count(secondary_type) from pokemons where secondary_type = 7;
 
-select count(pokemons.primary_type), types.name from types left join pokemons on pokemons.primary_type=types.id group by types.id 
+select count(pokemons.primary_type), types.name from types left join pokemons on pokemons.primary_type=types.id group by types.id
+
+select trainerID, count(*) from pokemon_trainer where pokelevel = 100 group by trainerID;
+
+SELECT TrainerID, COUNT(pokemon_id) FROM pokemon_trainer GROUP BY trainerID HAVING count(pokemon_id) = 1;
+
