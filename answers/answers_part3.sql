@@ -29,4 +29,4 @@ select trainerID, count(*) from pokemon_trainer where pokelevel = 100 group by t
 
 
 How many pokemon only belong to one trainer and no other?
-Select TrainerID, count(pokemon_id) FROM pokemon_trainer group by trainerID HAVING count(pokemon_id) = 1;
+Select TrainerID, count(pokemon_id) FROM pokemon_trainer group by trainerID having count(pokemon_id) = 1;
